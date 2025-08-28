@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows:80px 1fr;
+        grid-template-areas: 
+        "aside header"
+        "aside main";
+    }
+    header{
+        position: sticky;
+        top: 0;
+        background: green;
+        /* grid-column: 2 / 3;
+        grid-row: 1 / 2; */
+        grid-area: header;
+    
+    }
+    aside{
+        background:gray;
+        /* grid-column:  1 / 2;
+        grid-row: 1 / 3; */
+        grid-area: aside;
+    }
+    main{
+        background: #333;
+        grid-area: main;
+        /* grid-column: 2 / 3;
+        grid-row: 2 / 3; */
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 30px;
+
+        grid-template-areas: 
+        "c1 c2 c3"
+        "c4 c4 c5"
+        "c4 c4 c6";
+    }
+    main .card{
+        background: white;
+   
+        border-radius: 10px;
+    }
+    main .card:nth-child(1){
+        grid-area: c1;
+    }
+    main .card:nth-child(2){
+        grid-area: c2;
+    }
+    main .card:nth-child(2){
+        grid-area: c2;
+    }
+    main .card:nth-child(4){
+        grid-area: c4;
+    }
+    main .card:nth-child(5){
+        grid-area: c5;
+    }
+    main .card:nth-child(6){
+        grid-area: c6;
+    }
+    @media screen and (max-width:625px){
+        main{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,200px);
+            grid-template-areas: initial;
+        }
+        .card{
+            grid-area: initial !important;
+        }
+    }
+</style>
+<body>
+    <header>
+
+    </header>
+    <aside></aside>
+    <main>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </main>
+</body>
+</html>

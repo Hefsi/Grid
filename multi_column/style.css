@@ -1,0 +1,60 @@
+body{
+
+    margin: 0;
+  padding: 0;
+
+
+}
+article p{
+    color: gray;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+header{
+    background: white;
+    max-width: 1400px;
+    margin:20px auto;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.grid-container{
+    max-width: 1400px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 60px;
+}
+.grid-container .article1{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 60px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 60px;
+   
+}
+article img{
+    width: 100%;
+}
+
+@media screen and (max-width:980px){
+    article{
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width:760px){
+   .grid-container .article1, article{
+        display: block;
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 40px;
+    }
+}
+

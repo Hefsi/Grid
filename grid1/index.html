@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .grid-column-even{
+            max-width: 1400px;
+            margin: 10px auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 60px;
+        }
+        .flow p{
+            line-height: 1.5;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @media  (max-width:600px){
+            .grid-column-even{
+                grid-template-columns: 1fr;
+                max-width:90%;
+                margin: 0 auto;
+                padding: 10px;
+                gap: 20px;
+            }
+            .flow{
+                border-bottom: 1px solid #bbc7c7;
+                padding-bottom: 10px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-column-even">
+        <div class="flow">
+            <img src="chevron-down-square-regular-240 (1).png" alt="chevron1">
+            <h2>Store and sync</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Stay secure</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Share</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Collaborate</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Collaborate</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Collaborate</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Collaborate</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+        <div class="flow">
+            <img src="chevron-down-square-regular-240.png" alt="chevron1">
+            <h2>Collaborate</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatem neque a ipsum quis facere voluptas. Quos, ut temporibus.</p>
+        </div>
+    </div>
+</body>
+</html>

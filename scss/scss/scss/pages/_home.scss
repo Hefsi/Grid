@@ -1,0 +1,26 @@
+@use '../utils/variable' as *;
+@use '../utils/mixins'  as *;
+@use '../utils/functions' as *;
+
+
+
+body{
+   @include btn;
+}
+
+main{
+    #{&}__paragraph1{
+        color: $primary-color;
+        font-weight: button(medium);
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    #{&}__paragraph2{
+        @extend main__paragraph1;
+    }
+}
+
+p{
+    font-weight: weight(bold);
+}

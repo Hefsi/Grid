@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        body{
+            /* margin: 30px; */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #ddd;
+        }
+        header{
+            background: white;
+            /* max-width: 100%; */
+        }
+        nav {
+            height: 100px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        nav .nav-left{
+            justify-self: start;
+            /* margin-left: 30px; */
+        }
+        nav .nav-right{
+            justify-self: end;
+            /* margin-right: 30px; */
+      
+        }
+        nav .nav-right a{
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+        }
+        main{
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 50px;
+            max-width: 1400px;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        main .welcome{
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 100px;
+            align-items: start;
+        }
+        main .welcome img{
+            border-radius: 10px;
+        }
+        main .welcome p{
+            line-height: 1.5;
+            color: #333;
+        }
+        main  .serve{
+            grid-column: span 3;
+            
+            justify-self: center;
+        }
+        main .services{
+            grid-column:  span 3;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+        }
+        main .services div{
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 3px3px 3px rgba(0,0,0,0.75);
+        }
+        main .services div p{
+            color: #333;
+            line-height: 1.5;
+        }
+
+    </style>
+
+
+
+
+  <!--  <style>
+        body {
+            box-sizing: border-box;
+            background: #ddd;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background: white;
+            padding: 10px 20px;
+        }
+    
+        nav {
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+    
+        nav .nav-left {
+            margin-left: 0;
+            margin-bottom: 10px; /* Add some bottom margin on small screens */
+        }
+    
+        nav .nav-right {
+            margin-right: 0;
+            display: flex;
+            width: 100%; /* Make links take full width on small screens */
+            flex-direction: column; /* Stack links vertically */
+            align-items: flex-start; /* Align links to the left */
+        }
+    
+        nav .nav-right a {
+            margin-left: 0; /* Remove left margin */
+            margin-bottom: 10px; /* Add spacing between stacked links */
+            text-decoration: none;
+            color: #333;
+        }
+    
+        main {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column by default */
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+    
+        main .welcome {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+    
+        main .welcome img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        main .welcome p {
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    
+        main .serve {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        main .services {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr; /* Single column by default */
+            gap: 20px;
+        }
+    
+        main .services div {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+        }
+    
+        main .services div h3 {
+            margin-top: 0;
+        }
+    
+        main .services div p {
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+    
+        /* --- Media Query for Medium Devices (e.g., Tablets) --- */
+        @media (min-width: 768px) {
+            nav {
+                height: 100px;
+                flex-wrap: nowrap;
+            }
+    
+            nav .nav-left {
+                margin-left: 30px;
+                margin-bottom: 0; /* Remove bottom margin */
+            }
+    
+            nav .nav-right {
+                width: auto; /* Allow links to take their natural width */
+                flex-direction: row; /* Display links horizontally */
+                align-items: center; /* Align items vertically in the nav */
+            }
+    
+            nav .nav-right a {
+                margin-left: 15px;
+                margin-bottom: 0; /* Remove bottom margin */
+            }
+    
+            main {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on medium devices */
+                gap: 40px;
+                padding: 0 30px;
+            }
+    
+            main .welcome {
+                grid-column: 1 / -1; /* Span full width on medium devices as well */
+                flex-direction: row;
+                align-items: start;
+                column-gap: 40px;
+                text-align: left;
+            }
+    
+            main .services {
+                grid-template-columns: repeat(2, 1fr); /* Two columns for services */
+                gap: 25px;
+            }
+        }
+    
+        /* --- Media Query for Large Devices (e.g., Desktops) --- */
+        @media (min-width: 1024px) {
+            main {
+                grid-template-columns: repeat(3, 1fr); /* Three columns on large devices */
+                gap: 50px;
+                max-width: 1400px;
+                padding: 0;
+            }
+    
+            main .services {
+                grid-template-columns: repeat(3, 1fr); /* Three columns for services */
+                gap: 30px;
+            }
+        }
+    </style>-->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <h1>12 Col-Grid
+                </h1>
+            </div>
+            <div class="nav-right">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome">
+            <img src="1.png" alt="one">
+            <div>
+                <h2>Welcome</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam quaerat provident illo consequuntur optio dolorum incidunt, fugiat nemo tempora saepe porro iste ea tempore quos cupiditate modi 
+                    magni quod iusto veritatis possimus cum minus. Quae modi molestiae illo fugit!</p>
+            </div>
+        </div>
+        <h2 class="serve">Services</h2>
+        <div class="services">
+          
+            <div class="hello">
+                <h3>Hello.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, nesciunt nam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, voluptatum vel.</p>
+            </div>
+            <div class="hello">
+                <h3>Hello.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, nesciunt nam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, voluptatum vel.</p>
+            </div>
+            <div class="hello">
+                <h3>Hello.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, nesciunt nam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, voluptatum vel.</p>
+            </div>
+        </div>
+    </main>
+    <div>
+        &#9776; hambergur icon
+    </div>
+</body>
+</html>

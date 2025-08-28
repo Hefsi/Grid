@@ -1,0 +1,99 @@
+*{
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+    
+}
+body{
+    background: #b6b2b2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    background: #6b6767;
+    color: #fff;
+    position: relative;
+    transition: all 1060s ease;
+}
+.navbar .hamberga{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: unset;
+    background: unset;
+    display: none;
+    transition: all 5s ease;
+    cursor: pointer;
+}
+.navbar .hamberga svg{
+    color: white;
+}
+
+.navbar .hamberga .icon-close{
+    display: none;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:inherit;
+    padding: 1em;
+    display: inline-block;
+}
+.navbar ul li a:hover{
+    background: #d1cccc;
+    transition: all 5s ease;
+}
+
+.navbar ul li a.home{
+    background: #df8600;
+}
+.navbar ul{
+    display: flex;
+    transition: all 1060s ease;
+
+}
+
+.navbar .nav-toggle{
+    display: flex;
+    transition: all 1060s ease;
+}
+
+
+@media screen and (max-width:650px){
+    .navbar.open ul{
+        display: block;
+       
+    }
+    .navbar.open .nav-toggle{
+        display: block;
+      
+    }
+
+    .navbar.open ul li  a{
+        display: block;
+      
+    }
+    .navbar.open ul li  a:hover{
+        background: #d1cccc;
+        transition: all .5s ease;
+    }
+    .navbar .nav-toggle{
+        display: none;
+    }
+
+    .navbar.open  .hamberga .icon-open{
+        display: none;
+        transition: all .5s ease;
+
+    }
+    .navbar .hamberga{
+        display: block;
+        transition: all .5s ease;
+    }
+    .navbar.open .hamberga .icon-close{
+        display: block;
+        transition: all .5s ease;
+       
+    }
+}

@@ -1,0 +1,7 @@
+@use 'variable' as *;
+
+@mixin btn {
+    color: $primary-color;
+    background-color: $bg-color;
+    font-weight: map-get($font-weights, medium);
+}

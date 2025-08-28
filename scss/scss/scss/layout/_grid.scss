@@ -1,0 +1,8 @@
+@use '../utils/variable' as *;
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: $primary-color;
+}

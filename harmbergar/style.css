@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    background-color: #a7a7ec;
+}
+
+.navbar{
+   position: relative;
+}
+.navbar button{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    width: 30px;
+    height: 24px;
+    background: none;
+    
+    
+}
+nav .list ul  {
+    display: block;
+    
+}
+.open {
+  
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+svg{
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: -5px;
+    /* display: none; */
+}
+
+@media screen and (max-width:600px){
+    .navbar ul li:not(:first-child){
+        display: block;
+        background: #000;
+        transition: all .5s ease;
+    }
+
+
+  
+}

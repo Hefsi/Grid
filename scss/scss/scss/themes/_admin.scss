@@ -1,0 +1,7 @@
+@use '../utils/variable' as  *;
+@use '../utils/mixins' as *;
+
+
+h5{
+    @include btn;
+}

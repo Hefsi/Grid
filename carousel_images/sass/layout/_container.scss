@@ -1,0 +1,79 @@
+@use '../utils/mixins' as *;
+
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 800px; // you can change later
+    margin: 0 auto;
+    // background: #000;
+
+    #{&}__image{
+        // display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #{&}__button{
+     @include centerButton;
+    }
+
+ 
+
+    #{&}__button--left{
+        left:-10px;
+    }
+
+    #{&}__button--right{
+        right:-10px;
+    }
+    #{&}__track-container{
+        background: lightgreen;
+        // padding: 0px; //you can change later
+        height: 50%;  // you can change later
+        position: relative;
+        z-index: -1;
+        overflow: hidden;
+
+    
+    }
+    #{&}__track{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        height: 100%;
+        transition: transform 250ms ease-in;
+    }
+    
+    #{&}__slide{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #{&}__nav{
+        // background: pink;
+        display: flex;
+        justify-content: center;
+    }
+
+    #{&}__indicator{
+        border: 0;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background: rgba(0,0,0,0.3);
+        margin: 15px;
+        cursor: pointer;
+    }
+ .current-slide{
+    background: rgba(0,0,0,0.78);
+ }
+
+ .is-hidden{
+    display: none;
+ }
+}
+

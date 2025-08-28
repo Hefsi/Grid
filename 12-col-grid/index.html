@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         
+            margin: 0;
+            padding: 0;
+            background: #a8a8;
+            box-sizing: border-box;
+        }
+        header{
+    
+            background: #fff;
+       
+        }
+        .grid{
+            max-width:1200px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            gap: 30px;
+       
+          
+            align-items: center;
+        }
+        .grid h1{
+            grid-column: span 6;
+            /* margin-left: 30px; */
+         
+        }
+        .grid nav{
+            grid-column: span 6;
+            justify-self: end;
+        }
+        .grid nav a{
+            text-decoration: none;
+            margin-right: 30px;
+            color: #323230;
+
+        }
+        .grid nav a:hover{
+            background: #ddd;
+        }
+        .grid img{
+            grid-column: span 6;
+            width: 100%;
+            /* margin-left: 30px; */
+            margin-top: 1rem;
+            border-radius: 6px;
+        }
+        .grid .welcome{
+            grid-column: 8 / span 5;
+            /* margin-right: 30px; */
+        }
+        .grid .welcome p{
+            text-align: justify;
+            color: #323230;
+            line-height: 1.5em;
+        }
+        .grid .services{
+            grid-column: span 12;
+            text-align: center;
+        }
+        .grid .card{
+            grid-column: span 4;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .grid .card p{
+            color: #323230;
+            line-height: 1.5em;
+        }
+        .grid .card1{
+            /* margin-left: 30px; */
+        }
+        .grid .card3{
+            /* margin-right: 30px; */
+        }
+        @media screen and (max-width:680px){
+            .grid{
+                max-width: 320px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left:  auto;
+                margin-right: auto;
+            }
+            .grid h1{
+                font-size: 1.2em;
+            }
+            .grid nav a{
+            margin-right: 1px;
+
+        }
+            .grid img{
+                grid-column: span 12;
+            
+            }
+            .grid .welcome h2{
+                font-size: 1em;
+            }
+            .grid .services{
+                font-size: 1em;
+                text-align: start;
+            }
+            .grid .welcome{
+                grid-column: span 12;
+            }
+            .grid .card{
+                grid-column: span 12;
+            }
+            .grid .card h3{
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header >
+       <div class="grid">
+        <h1>12 Col Grid</h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+       </div>
+    </header>
+    <main class="grid">
+        <img src="banner.png" alt="banner">
+        <div class="welcome">
+            <h2>Welcome</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi rerum expedita soluta dolore, facilis eaque, commodi corporis nobis id similique fugit ipsam temporibus cumque error ut cupiditate voluptatem nam iste nisi.</p>
+        </div>
+        <h2 class="services">Services</h2>
+        <div class="card card1">
+            <h3>Hello.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, accusantium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, possimus?</p>
+        </div>
+        <div class="card">
+            <h3>Hello.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, accusantium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, possimus?</p>
+        </div>
+        <div class="card card3">
+            <h3>Hello.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, accusantium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, possimus?</p>
+        </div>
+    </main>
+</body>
+</html>

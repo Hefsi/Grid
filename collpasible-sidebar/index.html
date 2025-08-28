@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collapsible sidebar</title>
+
+    <style>
+
+        .grid{
+            display: grid;
+            grid-template-columns: 250px  1fr;
+            grid-template-rows:  auto;
+            grid-template-areas: 
+            "aside  content";
+            height: 100vh;
+        }
+        .aside{
+            grid-area: aside;
+            background: red;
+            position: relative;
+        }
+        .content{
+            grid-area:content;
+            background: green;
+            margin-left: 0px;
+            transition: margin-left 250ms ease-out;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px 1fr 80px;
+        }
+
+        .navbar{
+            background: pink;
+        }
+        .main{
+            background: purple;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .main-child{
+            background: white;
+            border-radius: 10px;
+        }
+        .footer{
+            background: #000;
+        }
+
+        .menu{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="grid">
+
+        <aside class="aside">
+            <img src="./menu-2.svg" alt="menu" class="menu" onclick="toggle()">
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+        </aside>
+    <div class="content">
+        <nav class="navbar">
+
+        </nav>
+
+        <main class="main">
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+          <div class="main-child"></div>
+        </main>
+        <footer class="footer">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, error.</p>
+        </footer>
+    </div>
+    </div>
+
+    <script>
+
+        const aside = document.querySelector(".aside");
+        const content = document.querySelector(".content");
+        const menu = document.querySelector(".menu");
+
+        const toggle = () => {
+            if( aside.style.width == "120px"){
+                aside.style.width = "250px";
+                content.style.marginLeft = "0px";
+            }else{
+                aside.style.width = "120px";
+                content.style.marginLeft = "-200px";
+            }
+        }
+
+        // aside.addEventListener("click", toggle());
+        // aside.addEventListener("click", () => {
+        //     aside.style.width = "80px";
+        //     content.style.marginLeft = "-200px";
+        // })
+    </script>
+</body>
+</html>

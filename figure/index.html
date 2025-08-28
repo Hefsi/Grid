@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    figure{
+        max-width: 1200px;
+        height: auto;
+        background: #ddd;
+        display: flex;
+        border-radius: 20px;
+       
+    }
+    figure img{
+       border-top-left-radius: 20px;
+       border-bottom-left-radius: 20px;
+    }
+    figure .banner blockquote p{
+       line-height: 1.5;
+       color: green;
+    }
+    figcaption div{
+        margin-left: 40px;
+    }
+    @media screen and  (max-width:600px){
+        figure{
+            flex-direction: column;
+        }
+    }
+   
+</style>
+<body>
+    <figure>
+        <img src="banner.png" alt="">
+        <div class="banner">
+            <blockquote>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus omnis temporibus, est commodi obcaecati illo ea esse eveniet tenetur, ad quaerat optio laboriosam necessitatibus sed maiores facere ratione veritatis amet enim. Nostrum quia porro numquam deleniti labore ipsam ea incidunt expedita temporibus fugiat aperiam qui saepe recusandae minus reprehenderit reiciendis quibusdam voluptatum ullam et cupiditate voluptas, harum sapiente. Impedit, atque. Aut dicta, doloribus impedit commodi aliquid soluta iure id veritatis iste, consectetur cumque maiores nemo? At eos quidem, mollitia, nulla sapiente sit dolores repellendus, excepturi quam in molestiae! Dolorum corporis fuga sint libero rem voluptas cum ab quasi distinctio!"</p>
+            </blockquote>
+            <figcaption>
+                <div style="color: blue;">
+                    Sarah
+                </div><br>
+                <div>
+                    Engineer
+                </div>
+            </figcaption>
+        </div>
+    </figure>
+</body>
+</html>

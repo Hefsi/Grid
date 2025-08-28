@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #01b671;
+}
+
+.btn {
+  color: #01b671;
+}
+
+body {
+  color: #01b671;
+  background-color: blue;
+  font-weight: 500;
+}
+
+main main__paragraph1, main main__paragraph2 {
+  color: #01b671;
+  font-weight: 500;
+}
+main main__paragraph1:hover, main main__paragraph2:hover {
+  color: pink;
+}
+p {
+  font-weight: 700;
+}
+
+h5 {
+  color: #01b671;
+  background-color: blue;
+  font-weight: 500;
+}
+
+h3 {
+  color: #ddd;
+}/*# sourceMappingURL=main.css.map */

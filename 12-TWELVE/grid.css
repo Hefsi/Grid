@@ -1,0 +1,87 @@
+body {
+    background: #eee;
+    box-sizing: border-box;
+}
+
+header {
+    max-width: 100%;
+    background: white;
+    padding: 20px;
+}
+
+nav {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+    margin-right: 20px;
+
+}
+
+nav .left {
+    justify-self: start;
+}
+
+nav .right {
+    justify-self: end;
+}
+
+main {
+    /* margin: 0 auto; */
+
+}
+
+main .welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* margin-left: 400px;
+    margin-right: 400px; */
+    margin: 60px 100px;
+    /* gap: 40px;  */
+    justify-items: center;
+    /* align-items: center; */
+
+}
+
+.welcome .wel {
+    margin-right: 198px;
+}
+
+.welcome .wel p {
+    line-height: 1.5;
+    color: gray;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 300px;
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.serve {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.125);
+}
+
+.serve p {
+    color: gray;
+}

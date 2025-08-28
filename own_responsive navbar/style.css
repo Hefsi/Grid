@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --textgray:#3f4954;
+    --bg-color:#0f0f0f;
+
+
+
+    --lexend:'Lexend Deca', sans-serif;
+    --livvic:'Livvic',sans-serif;
+
+
+    --sky:linear-gradient(120deg,#a1c4fd 0%, #c2e9fb 100%);
+}
+
+
+
+body{
+    margin: 0%;
+    background: url('asset/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* -------------- navbar -------------- */
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-black{
+    color: var(--bg-color);
+}
+nav{
+    padding: 0 1rem;
+    background: var(--sky);
+    position: relative;
+    justify-content: space-between;
+    height: 0rem;
+    min-height: 11vh;
+    overflow-y: hidden;
+    transition: height 1s cubic-bezier(0.26,-0.01, 0, 1.01);
+   
+}
+
+nav .nav-brand a{
+    display: block;
+    padding: 1rem 0;
+    font-family: var(--lexend);
+    font-size: 1.6rem;
+}
+
+
+/* create own toggle  icon */
+
+.icon, .icon::before, .icon::after{
+    position: relative;
+    width: 10px;
+    border: 2px solid var(--textgray);
+    border-radius: 3rem;
+    display: inline-block;
+    transition: all .8s ease;
+    transition-property: width,left;
+}
+
+.icon::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    left: -12px;
+}
+
+.icon::after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -2px;
+}
+
+.toggle-click,.toggle-click::before, .toggle-click::after{
+    width: 20px;
+}
+
+.toggle-click::before{
+    left: -2px;
+}
+
+nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+
+nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.4rem 4rem;
+}
+
+nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+}
+nav .nav-items{
+    list-style-type: none;
+    margin: 0;
+}
+
+nav .nav-items .nav-link{
+    padding: 1.3rem 1rem;
+    font-family: var(--livvic);
+    font-size: 1.1rem;
+}
+
+nav .nav-items .nav-link:hover{
+    background: var(--bg-color);
+}
+
+nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+nav .social{
+    padding: 1.4rem 0;
+}
+
+nav .social i{
+    padding: 0 .3rem;
+}
+
+
+.collapse{
+    height: 30rem;
+}
+
+@media only screen  and (max-width:800px){
+    nav .nav-items{
+        flex-direction: column;
+    }
+    
+    nav{
+        flex-direction: column !important;
+        display: block !important;
+    }
+
+    nav .toggle-collapse{
+        display: initial;
+    }
+}

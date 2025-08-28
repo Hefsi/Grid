@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        form{
+        
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            background: #ddd;
+            max-width: 380px;
+            margin: 70px auto;
+            row-gap: 30px;
+            padding: 10px 70px 20px  70px;
+        }
+        .grid h1{
+            grid-column:  span 12;
+            text-align: center;
+            row-gap: 0px;
+            padding-bottom: 0;
+            padding-bottom: 0px;
+            font-size: 1.5em;
+        }
+        .grid .col-4{
+            grid-column: span 3;
+        }
+        .grid .col-8{
+            grid-column: span 9;
+        }
+        .col-8 input{
+            width: 100%;
+            height: 150%;
+            border: 1px solid #a8a8a8aa;
+            border-radius: 5px;
+        }
+
+        .col-8 select{
+            width: 103%;
+            height: 170%;
+        }
+        .radio , .checkbox {
+            display: grid;
+            grid-template-columns: repeat(5,50px);
+        }
+        input,select{
+            outline: none;
+        }
+
+        .col-8  input:focus-visible,select:focus-visible{
+            border: 1px solid blue;
+            outline: 2px solid rgba(40, 2, 209, 0.25);
+            /* outline-offset: 5px; */
+        }
+ .col-8 .radio{
+    background-color: none;
+    border: none;
+}
+
+        input[type="radio"]{
+            background-color: red;
+            border: 1px solid red;
+
+        }
+        
+        .slider{
+            appearance: none;
+            width: 200%;
+            height: 8px;
+            background-color: #ebe9e7;
+            outline: none;
+            border-radius: 5px;
+        }
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background: blue;
+            cursor: pointer;
+        }
+        .slider::-moz-range-thumb{
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+  
+        <div class="grid">
+            <h1>Form</h1>
+            <div class="col-4">
+                <label for="">Firstname:</label>
+            </div>
+            <div class="col-8">
+                <input type="text" name="" id="" class="fname">
+            </div>
+            <div class="col-4">
+                <label for="">Lastname:</label>
+            </div>
+            <div class="col-8">
+                <input type="text" name="" id="">
+            </div>
+            <div class="col-4">
+                <label for="">Email:</label>
+            </div>
+            <div class="col-8">
+                <input type="email" name="" id="">
+            </div>
+            <div class="col-4">
+                <label for="">PhoneNo:</label>
+            </div>
+            <div class="col-8">
+                <input type="Phonenumber" name="" id="">
+            </div>
+            <div class="col-4">
+                <label for=""> Country:</label>
+            </div>
+            <div class="col-8">
+               <select name="" id="">
+                <option value="default">Choose your Country</option>
+                <option value="">Australia</option>
+               </select>
+
+            </div>
+            <div class="col-4">
+                <label for="">Gender:</label>
+            </div>
+            <div class="col-8">
+                <div class="radio">
+                    <input type="radio" name="gender" id="">
+                    <input type="radio" name="gender" id="">
+                </div>
+              
+
+            </div>
+            <div class="col-4">
+                <label for="">Checkbox:</label>
+            </div>
+            <div class="col-8">
+                <div class="checkbox">
+                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" id="">
+                </div>
+              
+
+            </div>
+           <div class="container">
+            <input type="range" name="" id="range" class="slider"  min="0" max="100" value="4">
+            <div class="value"></div>
+           </div>
+        </div>
+    </form>
+    <script>
+        let slider = document.getElementById("#range");
+     
+        let saa = document.querySelector(".value");
+        saa.innerHTML = slider.value;
+        
+        slider.addEventListener("input", function() {
+            saa.textContent = this.value;
+         
+        })
+
+    </script>
+</body>
+</html> 

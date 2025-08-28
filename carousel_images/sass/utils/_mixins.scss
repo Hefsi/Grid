@@ -1,0 +1,9 @@
+@mixin centerButton{
+    position: absolute;
+    top: 25%;
+    // z-index: 9;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}

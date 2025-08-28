@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background: #ddd;
+        }
+        header{
+            background: white;
+         
+        }
+        nav{
+            max-width: 1400px;
+            height: 80px;
+            margin:10px auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+   
+            align-items: center;
+            border-bottom: 1px solid greenyellow;
+        
+        }
+        nav .nav-left{
+            justify-self: start;
+           
+        }
+        nav .nav-left a{ 
+            text-decoration: none;
+            margin-left: 30px;
+            color: greenyellow;
+        }
+        nav .nav-right{
+            justify-self: end;
+        }
+        nav .nav-right a{
+            text-decoration: none;
+            margin-left: 30px;
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="">mdn web docs</a>
+                <a href="">References</a>
+                <a href="">Guides</a>
+                <a href="">MDN Plus</a>
+            </div>
+            <div class="nav-right">
+                <a href="">Theme</a>
+                <a href="">Search</a>
+                <a href="">Already subscriber</a>
+                <a href="">Get MDN Plus</a>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

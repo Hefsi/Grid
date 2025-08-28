@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+    </script>
+    <style>
+        #btn1{
+            border: 0;
+            width: 70px;
+            height: 50px;
+            margin: 30px;
+            background: linear-gradient(
+                to right,
+                rgba(0, 191, 255,0.7),
+                rgba(204, 0, 153,0.4)
+            );
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1"> click me </button>
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+</body>
+
+</html>

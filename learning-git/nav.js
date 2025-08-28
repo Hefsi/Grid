@@ -1,3 +1,3 @@
+// initialize variable i
+var i = 0;
 
-
-// added inline comment  

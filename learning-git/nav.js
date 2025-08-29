@@ -7,3 +7,6 @@ console.log("added another console");
 
 
 console.log("added console");
+
+// from main
+console.log("please");
